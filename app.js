@@ -7,6 +7,9 @@ var Cors = require('cors');
 const xssFilter = require('x-xss-protection');
 
 var usersRouter = require('./src/routes/users');
+var scoresRouter = require('./src/routes/scores');
+var patternsRouter = require('./src/routes/patterns');
+var soundsRouter = require('./src/routes/sounds');
 
 var app = express();
 
@@ -15,6 +18,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 app.use(logger('dev'));
+app.use(express.static(__dirname + '/upload'))
 app.use(Cors());
 app.use(xssFilter());
 app.use(express.json());
@@ -23,6 +27,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/users', usersRouter);
+app.use('/scores', scoresRouter);
+app.use('/patterns', patternsRouter);
+app.use('/sounds', soundsRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
