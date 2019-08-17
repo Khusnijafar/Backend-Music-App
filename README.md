@@ -10,8 +10,8 @@
 ## Installation
 ### Clone
 ```
-$ git clone https://github.com/Khusnijafar/Backend-NodeJS-react-Lib-App.git
-$ cd musicapp
+$ git clone https://github.com/Khusnijafar/Backend-Music-App.git
+$ cd musicgameserver
 $ npm install
 ```
 
