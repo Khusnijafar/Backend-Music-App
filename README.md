@@ -52,7 +52,7 @@ $ npm start
   
 ### User Routes
 
-   - ` / ` -> index of main REST
+    - ` / ` -> index of main REST
 
   
  ### PATCH Method for updating data
